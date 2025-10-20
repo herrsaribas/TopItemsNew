@@ -43,6 +43,14 @@ class TopItemsController extends Controller
         $items = array();
         foreach ($resultItems as $item)
         {
+            // Resim URL'lerini düzelt
+            if (isset($item['variationImageList']) && is_array($item['variationImageList'])) {
+                foreach ($item['variationImageList'] as &$image) {
+                    if (isset($image['path']) && !empty($image['path'])) {
+                        $image['path'] = 'https://558vh82o1qhe.c01-14.plentymarkets.com' . $image['path'];
+                    }
+                }
+            }
             $items[] = $item;
         }
         $templateData = array(
