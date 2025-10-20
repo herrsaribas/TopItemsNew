@@ -34,7 +34,7 @@ class TopItemsController extends Controller
         ];
 
         $itemParams = [
-            'language' => 'en'
+            'language' => 'de'
         ];
 
         $resultItems = $itemRepository
