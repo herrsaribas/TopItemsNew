@@ -29,7 +29,7 @@ class TopItemsController extends Controller
 
         $itemFilter = [
             'itemBase.isStoreSpecial' => [
-                'shopAction' => [3]
+                'shopAction' => [1]
             ]
         ];
 
